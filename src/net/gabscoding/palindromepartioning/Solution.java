@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 class Solution {
     public static ArrayList<ArrayList<String>> partition(String s) {
-        ArrayList<ArrayList<String>> stringPartitioned = new ArrayList<ArrayList<String>>();
+        ArrayList<ArrayList<String>> stringPartitioned = new ArrayList<>();
         int lowerBoundOfStringRule = 1;
         int upperBoundOfStringRule = 16;
         String hasNumberInString = ".*\\d.*";
@@ -22,7 +22,7 @@ class Solution {
     }
 
     private static ArrayList<String> createUnitaryPartitionsOf(String inputString) {
-        ArrayList<String> unitaryPartition = new ArrayList<String>();
+        ArrayList<String> unitaryPartition = new ArrayList<>();
         for (int i = 0; i < inputString.length(); i++) {
             unitaryPartition.add(String.valueOf(inputString.charAt(i)));
         }
@@ -30,7 +30,7 @@ class Solution {
     }
 
     private static ArrayList<String> createLargerPartitionsOf(String s) {
-        ArrayList<String> largerPartition = new ArrayList<String>();
+        ArrayList<String> largerPartition = new ArrayList<>();
         String groupOfSameCharacter = "";
         for (int i = 0; i < s.length(); i++) {
             int hasGroupOfSameCharacters = s.lastIndexOf(String.valueOf(s.charAt(i)));
